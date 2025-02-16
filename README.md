@@ -1,6 +1,3 @@
-# template-base
+# Build your contact form 7 fu****g form
 
-- bootstrap
-- font awesome
-- vue
-- axios
+This repo can help you!

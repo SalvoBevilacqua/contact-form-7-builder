@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
     <meta charset="UTF-8">
@@ -17,42 +17,130 @@
                 <h2 class="mb-5">Genera il tuo input:</h2>
                 <form>
                     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-gap-4">
+                        <!-- TYPE -->
                         <div class="col">
                             <p class="mb-2">Scegli il tipo di input</p>
-                            <div class="d-flex gap-3 align-items-center">
-                                <select class="form-select" aria-label="Tipo">
-                                    <option disabled selected></option>
-                                    <option value="text">text</option>
-                                    <option value="number">number</option>
-                                    <option value="date">date</option>
-                                    <option value="checkbox">checkbox</option>
-                                    <option value="radio">radio</option>
-                                    <option value="upload">upload</option>
-                                    <option value="captchac">captcha</option>
-                                    <option value="quiz">quiz</option>
-                                    <option value="acceptance">acceptance</option>
-                                    <option value="hidden">hidden</option>
-                                    <option value="submit">submit</option>
-                                </select>
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" role="switch" id="required">
-                                    <label class="form-check-label" for="required">Required</label>
-                                </div>
-                            </div>
+                            <select class="form-select" aria-label="Tipo">
+                                <option disabled selected></option>
+                                <option value="text">text</option>
+                                <option value="number">number</option>
+                                <option value="date">date</option>
+                                <option value="checkbox">checkbox</option>
+                                <option value="radio">radio</option>
+                                <option value="upload">upload</option>
+                                <option value="captchac">captcha</option>
+                                <option value="quiz">quiz</option>
+                                <option value="acceptance">acceptance</option>
+                                <option value="hidden">hidden</option>
+                                <option value="url">url</option>
+                                <option value="range">Range</option>
+                                <option value="submit">submit</option>
+                            </select>
                         </div>
+                        <!-- NOME -->
                         <div class="col">
                             <label for="nome" class="form-label">Nome dell'input</label>
                             <input type="text" class="form-control" id="nome" aria-describedby="nome">
                         </div>
+                        <!-- ID -->
                         <div class="col">
                             <label for="id" class="form-label">ID dell'input</label>
                             <input type="text" class="form-control" id="id" aria-describedby="id">
                         </div>
+                        <!-- MIN LENGHT -->
                         <div class="col">
-                            <label for="classArea" class="form-label">Inserisci tutte le classi che desideri aggiungere
-                                separate da uno spazio</label>
-                            <textarea class="form-control" id="classArea" rows="3"></textarea>
+                            <label for="minlength" class="form-label">Min Length</label>
+                            <input type="numeric" class="form-control" id="minlength" aria-describedby="minlength">
                         </div>
+                        <!-- MAX LENGHT -->
+                        <div class="col">
+                            <label for="maxlength" class="form-label">Max Length</label>
+                            <input type="numeric" class="form-control" id="maxlength" aria-describedby="maxlength">
+                        </div>
+                        <!-- SIZE -->
+                        <div class="col">
+                            <label for="size" class="form-label">Size</label>
+                            <input type="numeric" class="form-control" id="size" aria-describedby="size">
+                        </div>
+                        <!-- MIN -->
+                        <div class="col">
+                            <label for="min" class="form-label">Min</label>
+                            <input type="numeric" class="form-control" id="min" aria-describedby="min">
+                        </div>
+                        <!-- MAX -->
+                        <div class="col">
+                            <label for="max" class="form-label">Max</label>
+                            <input type="numeric" class="form-control" id="max" aria-describedby="max">
+                        </div>
+                        <!-- LIMIT (per i file) -->
+                        <div class="col">
+                            <label for="limit" class="form-label">Inserisci il limite in mb</label>
+                            <input type="numeric" class="form-control" id="limit" aria-describedby="limit">
+                        </div>
+                        <!-- STEP -->
+                        <div class="col">
+                            <label for="step" class="form-label">Step</label>
+                            <input type="number" class="form-control" id="step" aria-describedby="step">
+                        </div>
+                        <!-- MIN DATE 2025-12-31 -->
+                        <div class="col">
+                            <label for="min-date" class="form-label">Min-date</label>
+                            <input type="date" class="form-control" id="min-date" aria-describedby="min-date">
+                        </div>
+                        <!-- MAX DATE 2025-12-31 -->
+                        <div class="col">
+                            <label for="max-date" class="form-label">Max-date</label>
+                            <input type="date" class="form-control" id="max-date" aria-describedby="max-date">
+                        </div>
+                        <!-- PLACEHOLDER -->
+                        <div class="col">
+                            <label for="placeholder" class="form-label">Placehoder</label>
+                            <input type="text" class="form-control" id="placeholder" aria-describedby="placeholder">
+                        </div>
+                        <!-- CLASS -->
+                        <div class="col">
+                            <label for="classArea" class="form-label">Inserisci tutte le classi
+                                separate da uno spazio</label>
+                            <textarea class="form-control" id="classArea" rows="2"></textarea>
+                        </div>
+                        <!-- FILE TYPES -->
+                        <div class="col">
+                            <label for="filetypes" class="form-label">Inserisci tutti i tipi di file accettati separati
+                                da uno spazio</label>
+                            <textarea class="form-control" id="filetypes" rows="2"></textarea>
+                        </div>
+                        <!-- VARIE -->
+                        <div class="col d-flex flex-column gap-2">
+                            <p class="mb-2">Opzioni aggiuntive:</p>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="required">
+                                <label class="form-check-label" for="required">Required</label>
+                            </div>
+                            <!-- label invertita e exclusive per la checkbox e radio -->
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="label_first">
+                                <label class="form-check-label" for="label_first">label first</label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="exclusive">
+                                <label class="form-check-label" for="exclusive">exclusive</label>
+                            </div>
+                            <!-- multiple include_blank e first per i select -->
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="multiple">
+                                <label class="form-check-label" for="multiple">multiple</label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="include_blank">
+                                <label class="form-check-label" for="include_blank">include_blank</label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="first_as_label">
+                                <label class="form-check-label" for="first_as_label">first as label</label>
+                            </div>
+                        </div>
+                        <!-- continuare dopo le check -->
+
                         <div class="col">
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </div>

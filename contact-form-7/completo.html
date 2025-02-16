@@ -1,0 +1,50 @@
+<div class="bg-white rounded-5 p-4 p-md-5 mb-4">
+    <div class="row row-gap-4 g-4 form-controllo-udito prenota-appuntamento">
+        <div class="col-12">
+            [text* evento id:evento readonly class:form-control class:rounded-pill class:border-light class:shadow-sm
+            placeholder
+            "Seleziona un corso"]
+        </div>
+        <div class="col-12 col-lg-6">
+            <label for="nome" class="form-label">Nome</label>
+            [text* nome class:form-control class:rounded-pill class:border-light class:shadow-sm]
+        </div>
+        <div class="col-12 col-lg-6">
+            <label for="cognome" class="form-label">Cognome</label>
+            [text* cognome class:form-control class:rounded-pill class:border-light class:shadow-sm]
+        </div>
+        <div class="col-12 col-lg-6">
+            <label for="cell" class="form-label">Telefono</label>
+            [text* cell class:form-control class:rounded-pill class:border-light class:shadow-sm]
+        </div>
+        <div class="col-12 col-lg-6">
+            <label for="email" class="form-label">Email</label>
+            [email* email class:form-control class:rounded-pill class:border-light class:shadow-sm]
+        </div>
+        <div class="col-12 col-lg-6">
+            <label for="provincia" class="form-label">Provincia</label>
+            [select* provincia class:form-control class:rounded-pill class:border-light class:shadow-sm " " "Agrigento"
+            "Alessandria" "Ancona" "Aosta" "Arezzo" "Ascoli Piceno" "Asti" "Avellino"]
+        </div>
+        <div class="col-12 col-lg-6">
+            <label for="ruolo" class="form-label">Ruolo</label>
+            [select* ruolo class:form-control class:rounded-pill class:border-light class:shadow-sm " " "Medici ORL"
+            "Medici MMG"]
+        </div>
+        <div class="col-12">
+            <label for="messaggio" class="form-label">Messaggio</label>
+            [textarea* messaggio x6 class:form-control class:rounded-5 class:p-3 class:border-light class:shadow-sm]
+        </div>
+        <div class="col-12 col-lg-6">
+            [acceptance acceptance-909] Acconsento al trattamento sulla <a href="/privacy-policy"><u>privacy
+                    policy</u></a> [/acceptance]
+        </div>
+        <div class="col-12 col-lg-6">
+            [acceptance newsletter optional] Acconsento a ricevere comunicazioni a mezzo email informative e di offerte
+            e sconti speciali[/acceptance]
+        </div>
+    </div>
+</div>
+<div class="d-flex justify-content-end">
+    [submit class:button-white class:rounded-pill class:border-0 "Iscriviti ora"]
+</div>
